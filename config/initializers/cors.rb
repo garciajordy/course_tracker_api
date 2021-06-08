@@ -5,7 +5,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     end
 
     allow do
-        origins 'http://back-end-name-metlify'
+        origins 'http://course-tracker-api.netlify.app/'
         resource "*", headers: :any, methods: [:get, :put, :post, :patch, :delete, :options, :head], credentials: true
     end
 end
