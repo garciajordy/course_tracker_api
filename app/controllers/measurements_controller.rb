@@ -27,7 +27,7 @@ class MeasurementsController < ApplicationController
     end
 
     def destroy
-        @measurement.find(params[:id])
+        @measurement = Measurement.find(params[:id])
         @measurement.destroy
         render json: { status: :success}
     end
