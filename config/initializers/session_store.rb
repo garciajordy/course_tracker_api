@@ -1,5 +1,5 @@
 if Rails.env == "production"
-    Rails.application.config.session_store :cookie_store, key: "_authentication_app", domain: "http://course-tracker-api.netlify.app/"
+    Rails.application.config.session_store :cookie_store, key: "_authentication_app", domain: "https://floating-ocean-43337.herokuapp.com/"
 else
     Rails.application.config.session_store :cookie_store, key: "_authentication_app"
 end

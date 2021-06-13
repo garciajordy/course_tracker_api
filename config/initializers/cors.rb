@@ -5,7 +5,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     end
 
     allow do
-        origins 'http://course-tracker-api.netlify.app/'
+        origins 'https://floating-ocean-43337.herokuapp.com/'
         resource "*", headers: :any, methods: [:get, :put, :post, :patch, :delete, :options, :head], credentials: true
     end
 end
