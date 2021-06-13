@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     end
 
     def logged_in
-        current_user = Session.first
+        current_user = User.find(Session.first.user_id)
         if Session.any?
             render json: { 
                 logged_in: true,
