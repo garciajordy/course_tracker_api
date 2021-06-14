@@ -2,7 +2,7 @@ class MeasurementsController < ApplicationController
   include CurrentUserConcern
   def create
     @measurement = Measurement.create(amount: params[:measurement][:amount],
-                                      user_id: @current_user.id,
+                                      user_id: Session.first.user_id,
                                       course_id: params[:measurement][:course_id])
     if @measurement
       render json: {
