@@ -1,11 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-        origins 'http://localhost:3000'
-        resource "*", headers: :any, methods: [:get, :put, :post, :patch, :delete, :options, :head], credentials: true
-    end
-
-    allow do
-        origins "http://wizardly-borg-7ff21c.netlify.app/"
+        origins "*"
         resource "*", headers: :any, methods: [:get, :put, :post, :patch, :delete, :options, :head], credentials: true
     end
 end
